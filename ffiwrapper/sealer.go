@@ -28,6 +28,12 @@ func (sb *Sealer) SealProofType() abi.RegisteredSealProof {
 	return sb.sealProofType
 }
 
+var _ Storage = &Sealer{}
+
+func New(sectors SectorProvider, cfg *Config) (*Sealer, error) {
+	panic("")
+}
+
 func GenerateUnsealedCID(proofType abi.RegisteredSealProof, pieces []abi.PieceInfo) (cid.Cid, error) {
 	panic("")
 }
