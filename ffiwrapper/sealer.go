@@ -1,26 +1,15 @@
 package ffiwrapper
 
 import (
-	"bufio"
-	"bytes"
 	"context"
 	"io"
-	"math/bits"
-	"os"
-	"runtime"
 
 	"github.com/ipfs/go-cid"
-	"golang.org/x/xerrors"
 
-	ffi "github.com/filecoin-project/filecoin-ffi"
-	commcid "github.com/filecoin-project/go-fil-commcid"
 	"github.com/filecoin-project/specs-actors/actors/abi"
 	"github.com/filecoin-project/specs-storage/storage"
 
-	"github.com/filecoin-project/sector-storage/fr32"
-	"github.com/filecoin-project/sector-storage/stores"
 	"github.com/filecoin-project/sector-storage/storiface"
-	"github.com/filecoin-project/sector-storage/zerocomm"
 )
 
 var _ Storage = &Sealer{}
