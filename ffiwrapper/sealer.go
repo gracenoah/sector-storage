@@ -28,9 +28,11 @@ func (sb *Sealer) SealProofType() abi.RegisteredSealProof {
 	return sb.sealProofType
 }
 
-var _ Storage = &Sealer{}
-
 func New(sectors SectorProvider, cfg *Config) (*Sealer, error) {
+	panic("")
+}
+
+func (sb *Sealer) AddPiece(ctx context.Context, sector abi.SectorID, existingPieceSizes []abi.UnpaddedPieceSize, pieceSize abi.UnpaddedPieceSize, file storage.Data) (abi.PieceInfo, error) {
 	panic("")
 }
 
