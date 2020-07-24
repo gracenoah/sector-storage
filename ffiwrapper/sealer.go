@@ -1,6 +1,7 @@
 package ffiwrapper
 
 import (
+	"github.com/ipfs/go-cid"
 	"github.com/filecoin-project/specs-actors/actors/abi"
 	logging "github.com/ipfs/go-log/v2"
 )
@@ -25,4 +26,8 @@ func (sb *Sealer) SectorSize() abi.SectorSize {
 
 func (sb *Sealer) SealProofType() abi.RegisteredSealProof {
 	return sb.sealProofType
+}
+
+func GenerateUnsealedCID(proofType abi.RegisteredSealProof, pieces []abi.PieceInfo) (cid.Cid, error) {
+	panic("")
 }
